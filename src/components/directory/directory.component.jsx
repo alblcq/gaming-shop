@@ -11,10 +11,10 @@ class Directory extends Component {
         this.state = {
             sections: [
                 {
-                    title: 'cards',
+                    title: 'simulation',
                     imageUrl: 'https://photos.zillowstatic.com/p_e/ISr5xqzobhcwfj1000000000.jpg',
                     id: 1,
-                    linkUrl: 'shop/cards'
+                    linkUrl: 'shop/simulation'
                 },
                 {
                     title: 'strategy',
@@ -50,8 +50,8 @@ class Directory extends Component {
         return (
             <div className='directory-menu'>
                 {
-                    this.state.sections.map(({ id, title, imageUrl, size }) => (
-                        <MenuItem key={id} title={title} imageUrl={imageUrl} size={size} />
+                    this.state.sections.map(({ id, title, imageUrl, size, linkUrl }) => (
+                        <MenuItem key={id} title={title} imageUrl={imageUrl} size={size} linkUrl={linkUrl} />
                     ))
                 }
             </div>
